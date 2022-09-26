@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function atualizarUnidades() {
-  fetch("http://localhost:3000/api/get")
+  fetch("https://fierce-coast-68365.herokuapp.com/api/get")
     .then((res) => {
       return res.json();
     })
@@ -37,7 +37,7 @@ function novaUnidade() {
     body: JSON.stringify(unidade),
   };
 
-  fetch("http://localhost:3000/api/post", options).then((res) => {
+  fetch("https://fierce-coast-68365.herokuapp.com/api/post", options).then((res) => {
     atualizarUnidades();
   });
 }
@@ -52,7 +52,7 @@ function atualizaUnidade() {
     headers: new Headers({ "content-type": "application/json" }),
     body: JSON.stringify(unidade),
   };
-  fetch("http://localhost:3000/api/update", options).then((res) => {
+  fetch("https://fierce-coast-68365.herokuapp.com/api/update", options).then((res) => {
     console.log(JSON.stringify(unidade));
     atualizarUnidades();
   });
@@ -69,7 +69,7 @@ function deletar(e) {
     headers: new Headers({ "content-type": "application/json" }),
     body: JSON.stringify(unidade),
   };
-  fetch("http://localhost:3000/api/delete", options).then((res) => {
+  fetch("https://fierce-coast-68365.herokuapp.com/api/delete", options).then((res) => {
     atualizarUnidades();
   });
 }
