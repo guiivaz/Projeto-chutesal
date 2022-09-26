@@ -8,6 +8,4 @@ app.use("/api", apiRoute);
 
 app.use("/", express.static(path.join(__dirname, "public")));
 
-app.listen(port, () => {
-  console.log("Servidor rodando na porta: " + port);
-});
+app.listen(process.env.PORT || port)
