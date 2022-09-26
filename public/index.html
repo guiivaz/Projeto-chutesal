@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Unidades</title>
+  </head>
+  <body>
+    <div class="container-post">
+      <div id="div-post">
+        <h4>Inserir unidade</h4>
+        <div>
+          <label for="nome">Nome da nova unidade:</label>
+          <input type="text" id="nome" />
+        </div>
+        <button onclick="novaUnidade()">Adicionar unidade</button>
+      </div>
+      <div id="div-put">
+        <h4>Alterar unidade</h4>
+        <label for="id">ID da unidade:</label>
+        <input type="text" id="id" />
+        <label for="novo-nome">Novo nome da unidade:</label>
+        <input type="text" id="novo-nome" />
+        <button onclick="atualizaUnidade()">Alterar unidade</button>
+      </div>
+    </div>
+    <div id="content-container">
+      <header>
+        <h1>Unidades</h1>
+      </header>
+      <section>
+        <div id="container">
+          <div id="borda">
+            <table id="tabela-unidades">
+              <tbody>
+                <!-- <th>ID</th>
+                <th>Nome da unidade</th> -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
